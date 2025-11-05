@@ -1,26 +1,28 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import Intro from './components/Intro'
+import BodyContent from './components/BodyContent'
+import AuthorSpotlight from './components/AuthorSpotlight'
+import RelatedPosts from './components/RelatedPosts'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="bg-[#F9F9F9] text-[#1E3D4A]">
+      <Hero />
+      <Intro />
+      <BodyContent />
+      <AuthorSpotlight />
+      <RelatedPosts />
+
+      <footer className="relative bg-[#0B7373] text-white mt-10">
+        <svg className="w-full -mt-10" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,96 C320,48 480,16 720,16 C960,16 1120,48 1440,96 L1440,0 L0,0 Z" fill="#0B7373" />
+        </svg>
+        <div className="mx-auto max-w-6xl px-6 pb-12">
+          <div className="rounded-3xl bg-[radial-gradient(ellipse_at_top_left,rgba(72,169,166,0.12),rgba(11,115,115,0.12)_60%,transparent_80%)] p-6 md:p-8">
+            <p className="text-white/90">© {new Date().getFullYear()} Family Law Matters. Calm. Compassion. Confidence.</p>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
